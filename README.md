@@ -1,2 +1,2 @@
-# Decision Making in a Committee
+# Decision-making in Committees
 ## PHAS2443: Practical Mathematics II: miniproject
