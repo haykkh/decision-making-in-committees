@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     92496,       2247]
-NotebookOptionsPosition[     82946,       2027]
-NotebookOutlinePosition[     83402,       2044]
-CellTagsIndexPosition[     83359,       2041]
+NotebookDataLength[    153664,       3562]
+NotebookOptionsPosition[    143034,       3316]
+NotebookOutlinePosition[    143490,       3333]
+CellTagsIndexPosition[    143447,       3330]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2021,7 +2021,1296 @@ As we can see, group think is beginning to emerge\
 \>", "Text",
  CellChangeTimes->{{3.728735066657968*^9, 
   3.7287350756166143`*^9}},ExpressionUUID->"9572f5ff-6b9d-48b2-bbb9-\
-6dfd93ff01b8"]
+6dfd93ff01b8"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.72873828715724*^9, 
+  3.728738288798071*^9}},ExpressionUUID->"79f41869-f494-4bc7-a8e6-\
+af7d7f321fc0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomGraph", "[", 
+  RowBox[{"{", 
+   RowBox[{"15", ",", "105"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.72873806558862*^9, 3.728738129146763*^9}, {
+  3.728738191566894*^9, 3.7287382351248865`*^9}, {3.7287383102607718`*^9, 
+  3.7287383105264215`*^9}},ExpressionUUID->"c768db89-d20c-4779-8345-\
+8af9a06327b3"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}, {Null, 
+       SparseArray[
+       Automatic, {15, 15}, 0, {
+        1, {{0, 14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 182, 196,
+           210}, {{2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12}, {
+          13}, {14}, {15}, {1}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {
+          11}, {12}, {13}, {14}, {15}, {1}, {2}, {4}, {5}, {6}, {7}, {8}, {
+          9}, {10}, {11}, {12}, {13}, {14}, {15}, {1}, {2}, {3}, {5}, {6}, {
+          7}, {8}, {9}, {10}, {11}, {12}, {13}, {14}, {15}, {1}, {2}, {3}, {
+          4}, {6}, {7}, {8}, {9}, {10}, {11}, {12}, {13}, {14}, {15}, {1}, {
+          2}, {3}, {4}, {5}, {7}, {8}, {9}, {10}, {11}, {12}, {13}, {14}, {
+          15}, {1}, {2}, {3}, {4}, {5}, {6}, {8}, {9}, {10}, {11}, {12}, {
+          13}, {14}, {15}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {9}, {10}, {
+          11}, {12}, {13}, {14}, {15}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {
+          8}, {10}, {11}, {12}, {13}, {14}, {15}, {1}, {2}, {3}, {4}, {5}, {
+          6}, {7}, {8}, {9}, {11}, {12}, {13}, {14}, {15}, {1}, {2}, {3}, {
+          4}, {5}, {6}, {7}, {8}, {9}, {10}, {12}, {13}, {14}, {15}, {1}, {
+          2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {13}, {14}, {
+          15}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {
+          12}, {14}, {15}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {
+          10}, {11}, {12}, {13}, {15}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {
+          8}, {9}, {10}, {11}, {12}, {13}, {14}}}, Pattern}]}]], 
+    Typeset`boxes, Typeset`boxes$s2d = GraphicsGroupBox[{{
+       Directive[
+        Opacity[0.7], 
+        Hue[0.6, 0.7, 0.5]], 
+       LineBox[{{
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$2", Automatic, Center]}, {
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$3", Automatic, Center]}, {
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$4", Automatic, Center]}, {
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$5", Automatic, Center]}, {
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$6", Automatic, Center]}, {
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$7", Automatic, Center]}, {
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$8", Automatic, Center]}, {
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$9", Automatic, Center]}, {
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$10", Automatic, Center]}, {
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$11", Automatic, Center]}, {
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$12", Automatic, Center]}, {
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$13", Automatic, Center]}, {
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$14", Automatic, Center]}, {
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$15", Automatic, Center]}, {
+          DynamicLocation["VertexID$2", Automatic, Center], 
+          DynamicLocation["VertexID$3", Automatic, Center]}, {
+          DynamicLocation["VertexID$2", Automatic, Center], 
+          DynamicLocation["VertexID$4", Automatic, Center]}, {
+          DynamicLocation["VertexID$2", Automatic, Center], 
+          DynamicLocation["VertexID$5", Automatic, Center]}, {
+          DynamicLocation["VertexID$2", Automatic, Center], 
+          DynamicLocation["VertexID$6", Automatic, Center]}, {
+          DynamicLocation["VertexID$2", Automatic, Center], 
+          DynamicLocation["VertexID$7", Automatic, Center]}, {
+          DynamicLocation["VertexID$2", Automatic, Center], 
+          DynamicLocation["VertexID$8", Automatic, Center]}, {
+          DynamicLocation["VertexID$2", Automatic, Center], 
+          DynamicLocation["VertexID$9", Automatic, Center]}, {
+          DynamicLocation["VertexID$2", Automatic, Center], 
+          DynamicLocation["VertexID$10", Automatic, Center]}, {
+          DynamicLocation["VertexID$2", Automatic, Center], 
+          DynamicLocation["VertexID$11", Automatic, Center]}, {
+          DynamicLocation["VertexID$2", Automatic, Center], 
+          DynamicLocation["VertexID$12", Automatic, Center]}, {
+          DynamicLocation["VertexID$2", Automatic, Center], 
+          DynamicLocation["VertexID$13", Automatic, Center]}, {
+          DynamicLocation["VertexID$2", Automatic, Center], 
+          DynamicLocation["VertexID$14", Automatic, Center]}, {
+          DynamicLocation["VertexID$2", Automatic, Center], 
+          DynamicLocation["VertexID$15", Automatic, Center]}, {
+          DynamicLocation["VertexID$3", Automatic, Center], 
+          DynamicLocation["VertexID$4", Automatic, Center]}, {
+          DynamicLocation["VertexID$3", Automatic, Center], 
+          DynamicLocation["VertexID$5", Automatic, Center]}, {
+          DynamicLocation["VertexID$3", Automatic, Center], 
+          DynamicLocation["VertexID$6", Automatic, Center]}, {
+          DynamicLocation["VertexID$3", Automatic, Center], 
+          DynamicLocation["VertexID$7", Automatic, Center]}, {
+          DynamicLocation["VertexID$3", Automatic, Center], 
+          DynamicLocation["VertexID$8", Automatic, Center]}, {
+          DynamicLocation["VertexID$3", Automatic, Center], 
+          DynamicLocation["VertexID$9", Automatic, Center]}, {
+          DynamicLocation["VertexID$3", Automatic, Center], 
+          DynamicLocation["VertexID$10", Automatic, Center]}, {
+          DynamicLocation["VertexID$3", Automatic, Center], 
+          DynamicLocation["VertexID$11", Automatic, Center]}, {
+          DynamicLocation["VertexID$3", Automatic, Center], 
+          DynamicLocation["VertexID$12", Automatic, Center]}, {
+          DynamicLocation["VertexID$3", Automatic, Center], 
+          DynamicLocation["VertexID$13", Automatic, Center]}, {
+          DynamicLocation["VertexID$3", Automatic, Center], 
+          DynamicLocation["VertexID$14", Automatic, Center]}, {
+          DynamicLocation["VertexID$3", Automatic, Center], 
+          DynamicLocation["VertexID$15", Automatic, Center]}, {
+          DynamicLocation["VertexID$4", Automatic, Center], 
+          DynamicLocation["VertexID$5", Automatic, Center]}, {
+          DynamicLocation["VertexID$4", Automatic, Center], 
+          DynamicLocation["VertexID$6", Automatic, Center]}, {
+          DynamicLocation["VertexID$4", Automatic, Center], 
+          DynamicLocation["VertexID$7", Automatic, Center]}, {
+          DynamicLocation["VertexID$4", Automatic, Center], 
+          DynamicLocation["VertexID$8", Automatic, Center]}, {
+          DynamicLocation["VertexID$4", Automatic, Center], 
+          DynamicLocation["VertexID$9", Automatic, Center]}, {
+          DynamicLocation["VertexID$4", Automatic, Center], 
+          DynamicLocation["VertexID$10", Automatic, Center]}, {
+          DynamicLocation["VertexID$4", Automatic, Center], 
+          DynamicLocation["VertexID$11", Automatic, Center]}, {
+          DynamicLocation["VertexID$4", Automatic, Center], 
+          DynamicLocation["VertexID$12", Automatic, Center]}, {
+          DynamicLocation["VertexID$4", Automatic, Center], 
+          DynamicLocation["VertexID$13", Automatic, Center]}, {
+          DynamicLocation["VertexID$4", Automatic, Center], 
+          DynamicLocation["VertexID$14", Automatic, Center]}, {
+          DynamicLocation["VertexID$4", Automatic, Center], 
+          DynamicLocation["VertexID$15", Automatic, Center]}, {
+          DynamicLocation["VertexID$5", Automatic, Center], 
+          DynamicLocation["VertexID$6", Automatic, Center]}, {
+          DynamicLocation["VertexID$5", Automatic, Center], 
+          DynamicLocation["VertexID$7", Automatic, Center]}, {
+          DynamicLocation["VertexID$5", Automatic, Center], 
+          DynamicLocation["VertexID$8", Automatic, Center]}, {
+          DynamicLocation["VertexID$5", Automatic, Center], 
+          DynamicLocation["VertexID$9", Automatic, Center]}, {
+          DynamicLocation["VertexID$5", Automatic, Center], 
+          DynamicLocation["VertexID$10", Automatic, Center]}, {
+          DynamicLocation["VertexID$5", Automatic, Center], 
+          DynamicLocation["VertexID$11", Automatic, Center]}, {
+          DynamicLocation["VertexID$5", Automatic, Center], 
+          DynamicLocation["VertexID$12", Automatic, Center]}, {
+          DynamicLocation["VertexID$5", Automatic, Center], 
+          DynamicLocation["VertexID$13", Automatic, Center]}, {
+          DynamicLocation["VertexID$5", Automatic, Center], 
+          DynamicLocation["VertexID$14", Automatic, Center]}, {
+          DynamicLocation["VertexID$5", Automatic, Center], 
+          DynamicLocation["VertexID$15", Automatic, Center]}, {
+          DynamicLocation["VertexID$6", Automatic, Center], 
+          DynamicLocation["VertexID$7", Automatic, Center]}, {
+          DynamicLocation["VertexID$6", Automatic, Center], 
+          DynamicLocation["VertexID$8", Automatic, Center]}, {
+          DynamicLocation["VertexID$6", Automatic, Center], 
+          DynamicLocation["VertexID$9", Automatic, Center]}, {
+          DynamicLocation["VertexID$6", Automatic, Center], 
+          DynamicLocation["VertexID$10", Automatic, Center]}, {
+          DynamicLocation["VertexID$6", Automatic, Center], 
+          DynamicLocation["VertexID$11", Automatic, Center]}, {
+          DynamicLocation["VertexID$6", Automatic, Center], 
+          DynamicLocation["VertexID$12", Automatic, Center]}, {
+          DynamicLocation["VertexID$6", Automatic, Center], 
+          DynamicLocation["VertexID$13", Automatic, Center]}, {
+          DynamicLocation["VertexID$6", Automatic, Center], 
+          DynamicLocation["VertexID$14", Automatic, Center]}, {
+          DynamicLocation["VertexID$6", Automatic, Center], 
+          DynamicLocation["VertexID$15", Automatic, Center]}, {
+          DynamicLocation["VertexID$7", Automatic, Center], 
+          DynamicLocation["VertexID$8", Automatic, Center]}, {
+          DynamicLocation["VertexID$7", Automatic, Center], 
+          DynamicLocation["VertexID$9", Automatic, Center]}, {
+          DynamicLocation["VertexID$7", Automatic, Center], 
+          DynamicLocation["VertexID$10", Automatic, Center]}, {
+          DynamicLocation["VertexID$7", Automatic, Center], 
+          DynamicLocation["VertexID$11", Automatic, Center]}, {
+          DynamicLocation["VertexID$7", Automatic, Center], 
+          DynamicLocation["VertexID$12", Automatic, Center]}, {
+          DynamicLocation["VertexID$7", Automatic, Center], 
+          DynamicLocation["VertexID$13", Automatic, Center]}, {
+          DynamicLocation["VertexID$7", Automatic, Center], 
+          DynamicLocation["VertexID$14", Automatic, Center]}, {
+          DynamicLocation["VertexID$7", Automatic, Center], 
+          DynamicLocation["VertexID$15", Automatic, Center]}, {
+          DynamicLocation["VertexID$8", Automatic, Center], 
+          DynamicLocation["VertexID$9", Automatic, Center]}, {
+          DynamicLocation["VertexID$8", Automatic, Center], 
+          DynamicLocation["VertexID$10", Automatic, Center]}, {
+          DynamicLocation["VertexID$8", Automatic, Center], 
+          DynamicLocation["VertexID$11", Automatic, Center]}, {
+          DynamicLocation["VertexID$8", Automatic, Center], 
+          DynamicLocation["VertexID$12", Automatic, Center]}, {
+          DynamicLocation["VertexID$8", Automatic, Center], 
+          DynamicLocation["VertexID$13", Automatic, Center]}, {
+          DynamicLocation["VertexID$8", Automatic, Center], 
+          DynamicLocation["VertexID$14", Automatic, Center]}, {
+          DynamicLocation["VertexID$8", Automatic, Center], 
+          DynamicLocation["VertexID$15", Automatic, Center]}, {
+          DynamicLocation["VertexID$9", Automatic, Center], 
+          DynamicLocation["VertexID$10", Automatic, Center]}, {
+          DynamicLocation["VertexID$9", Automatic, Center], 
+          DynamicLocation["VertexID$11", Automatic, Center]}, {
+          DynamicLocation["VertexID$9", Automatic, Center], 
+          DynamicLocation["VertexID$12", Automatic, Center]}, {
+          DynamicLocation["VertexID$9", Automatic, Center], 
+          DynamicLocation["VertexID$13", Automatic, Center]}, {
+          DynamicLocation["VertexID$9", Automatic, Center], 
+          DynamicLocation["VertexID$14", Automatic, Center]}, {
+          DynamicLocation["VertexID$9", Automatic, Center], 
+          DynamicLocation["VertexID$15", Automatic, Center]}, {
+          DynamicLocation["VertexID$10", Automatic, Center], 
+          DynamicLocation["VertexID$11", Automatic, Center]}, {
+          DynamicLocation["VertexID$10", Automatic, Center], 
+          DynamicLocation["VertexID$12", Automatic, Center]}, {
+          DynamicLocation["VertexID$10", Automatic, Center], 
+          DynamicLocation["VertexID$13", Automatic, Center]}, {
+          DynamicLocation["VertexID$10", Automatic, Center], 
+          DynamicLocation["VertexID$14", Automatic, Center]}, {
+          DynamicLocation["VertexID$10", Automatic, Center], 
+          DynamicLocation["VertexID$15", Automatic, Center]}, {
+          DynamicLocation["VertexID$11", Automatic, Center], 
+          DynamicLocation["VertexID$12", Automatic, Center]}, {
+          DynamicLocation["VertexID$11", Automatic, Center], 
+          DynamicLocation["VertexID$13", Automatic, Center]}, {
+          DynamicLocation["VertexID$11", Automatic, Center], 
+          DynamicLocation["VertexID$14", Automatic, Center]}, {
+          DynamicLocation["VertexID$11", Automatic, Center], 
+          DynamicLocation["VertexID$15", Automatic, Center]}, {
+          DynamicLocation["VertexID$12", Automatic, Center], 
+          DynamicLocation["VertexID$13", Automatic, Center]}, {
+          DynamicLocation["VertexID$12", Automatic, Center], 
+          DynamicLocation["VertexID$14", Automatic, Center]}, {
+          DynamicLocation["VertexID$12", Automatic, Center], 
+          DynamicLocation["VertexID$15", Automatic, Center]}, {
+          DynamicLocation["VertexID$13", Automatic, Center], 
+          DynamicLocation["VertexID$14", Automatic, Center]}, {
+          DynamicLocation["VertexID$13", Automatic, Center], 
+          DynamicLocation["VertexID$15", Automatic, Center]}, {
+          DynamicLocation["VertexID$14", Automatic, Center], 
+          DynamicLocation["VertexID$15", Automatic, Center]}}]}, {
+       Directive[
+        Hue[0.6, 0.2, 0.8], 
+        EdgeForm[
+         Directive[
+          GrayLevel[0], 
+          Opacity[0.7]]]], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{-0.4067366430758008, 0.9135454576426012}, 
+           0.02252250508849482], "DynamicName", BoxID -> "VertexID$1"], 
+         InsetBox[
+          FormBox["1", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$1", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$1"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{-0.7431448254773946, 0.6691306063588587}, 
+           0.02252250508849482], "DynamicName", BoxID -> "VertexID$2"], 
+         InsetBox[
+          FormBox["2", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$2", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$2"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{-0.9510565162951538, 0.3090169943749484}, 
+           0.02252250508849482], "DynamicName", BoxID -> "VertexID$3"], 
+         InsetBox[
+          FormBox["3", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$3", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$3"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{-0.9945218953682733, -0.10452846326765261`}, 
+           0.02252250508849482], "DynamicName", BoxID -> "VertexID$4"], 
+         InsetBox[
+          FormBox["4", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$4", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$4"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{-0.8660254037844384, -0.49999999999999933`}, 
+           0.02252250508849482], "DynamicName", BoxID -> "VertexID$5"], 
+         InsetBox[
+          FormBox["5", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$5", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$5"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{-0.5877852522924728, -0.8090169943749468}, 
+           0.02252250508849482], "DynamicName", BoxID -> "VertexID$6"], 
+         InsetBox[
+          FormBox["6", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$6", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$6"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{-0.20791169081775882`, -0.9781476007338054}, 
+           0.02252250508849482], "DynamicName", BoxID -> "VertexID$7"], 
+         InsetBox[
+          FormBox["7", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$7", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$7"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{0.20791169081775956`, -0.9781476007338058}, 
+           0.02252250508849482], "DynamicName", BoxID -> "VertexID$8"], 
+         InsetBox[
+          FormBox["8", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$8", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$8"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{0.5877852522924734, -0.8090169943749481}, 
+           0.02252250508849482], "DynamicName", BoxID -> "VertexID$9"], 
+         InsetBox[
+          FormBox["9", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$9", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$9"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{0.8660254037844389, -0.5000000000000012}, 
+           0.02252250508849482], "DynamicName", BoxID -> "VertexID$10"], 
+         InsetBox[
+          FormBox["10", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$10", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$10"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{0.9945218953682734, -0.1045284632676543}, 
+           0.02252250508849482], "DynamicName", BoxID -> "VertexID$11"], 
+         InsetBox[
+          FormBox["11", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$11", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$11"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{0.9510565162951536, 0.3090169943749455}, 
+           0.02252250508849482], "DynamicName", BoxID -> "VertexID$12"], 
+         InsetBox[
+          FormBox["12", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$12", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$12"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{0.7431448254773939, 0.6691306063588571}, 
+           0.02252250508849482], "DynamicName", BoxID -> "VertexID$13"], 
+         InsetBox[
+          FormBox["13", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$13", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$13"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{0.4067366430758001, 0.9135454576426005}, 
+           0.02252250508849482], "DynamicName", BoxID -> "VertexID$14"], 
+         InsetBox[
+          FormBox["14", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$14", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$14"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{1.8369701987210297`*^-16, 1.}, 0.02252250508849482], 
+          "DynamicName", BoxID -> "VertexID$15"], 
+         InsetBox[
+          FormBox["15", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$15", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$15"]}}], $CellContext`flag}, 
+    TagBox[
+     DynamicBox[GraphComputation`NetworkGraphicsBox[
+      3, Typeset`graph, Typeset`boxes, $CellContext`flag], {
+      CachedValue :> Typeset`boxes, SingleEvaluation -> True, 
+       SynchronousUpdating -> False, TrackedSymbols :> {$CellContext`flag}},
+      ImageSizeCache->{{6.1799999999999695`, 
+       366.40941570508}, {-190.6966157050797, 168.68663530902984`}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False,
+    UnsavedVariables:>{$CellContext`flag}]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{{3.7287380716792135`*^9, 3.728738129615349*^9}, {
+   3.7287381931450295`*^9, 3.7287382354061656`*^9}, 
+   3.7287383108389516`*^9},ExpressionUUID->"c94c2df5-fe5c-49b4-8146-\
+5602f10917b1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NearestNeighborGraph", "[", 
+  RowBox[{
+   RowBox[{"Range", "[", "15", "]"}], ",", " ", "8"}], "]"}]], "Input",
+ CellChangeTimes->{{3.728738992015622*^9, 
+  3.7287390073666553`*^9}},ExpressionUUID->"1a5f7234-6d74-4267-a63d-\
+6072e502ba4f"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}, {Null, 
+       SparseArray[
+       Automatic, {15, 15}, 0, {
+        1, {{0, 8, 16, 24, 32, 40, 49, 63, 77, 91, 100, 108, 116, 124, 132, 
+          140}, {{2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {1}, {3}, {4}, {5}, {
+          6}, {7}, {8}, {9}, {1}, {2}, {4}, {5}, {6}, {7}, {8}, {9}, {1}, {
+          2}, {3}, {5}, {6}, {7}, {8}, {9}, {1}, {2}, {3}, {4}, {6}, {7}, {
+          8}, {9}, {1}, {2}, {3}, {4}, {5}, {7}, {8}, {9}, {10}, {1}, {2}, {
+          3}, {4}, {5}, {6}, {8}, {9}, {10}, {11}, {12}, {13}, {14}, {15}, {
+          1}, {2}, {3}, {4}, {5}, {6}, {7}, {9}, {10}, {11}, {12}, {13}, {
+          14}, {15}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {10}, {11}, {
+          12}, {13}, {14}, {15}, {6}, {7}, {8}, {9}, {11}, {12}, {13}, {14}, {
+          15}, {7}, {8}, {9}, {10}, {12}, {13}, {14}, {15}, {7}, {8}, {9}, {
+          10}, {11}, {13}, {14}, {15}, {7}, {8}, {9}, {10}, {11}, {12}, {
+          14}, {15}, {7}, {8}, {9}, {10}, {11}, {12}, {13}, {15}, {7}, {8}, {
+          9}, {10}, {11}, {12}, {13}, {14}}}, Pattern}]}, {
+      GraphLayout -> "LinearEmbedding", 
+       VertexCoordinates -> {{1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0}, {6, 0}, {
+        7, 0}, {8, 0}, {9, 0}, {10, 0}, {11, 0}, {12, 0}, {13, 0}, {14, 0}, {
+        15, 0}}}]], Typeset`boxes, Typeset`boxes$s2d = GraphicsGroupBox[{{
+       Directive[
+        Opacity[0.7], 
+        Hue[0.6, 0.7, 0.5]], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$1", Automatic, Center], {1.5, 0.5}, 
+         DynamicLocation["VertexID$2", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$1", Automatic, Center], {2., 1.}, 
+         DynamicLocation["VertexID$3", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$1", Automatic, Center], {2.5, 1.5}, 
+         DynamicLocation["VertexID$4", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$1", Automatic, Center], {3., 2.}, 
+         DynamicLocation["VertexID$5", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$1", Automatic, Center], {3.5, 2.5}, 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$1", Automatic, Center], {4., 3.}, 
+         DynamicLocation["VertexID$7", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$1", Automatic, Center], {4.5, 3.5}, 
+         DynamicLocation["VertexID$8", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$1", Automatic, Center], {5., 4.}, 
+         DynamicLocation["VertexID$9", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$2", Automatic, Center], {2.5, 0.5}, 
+         DynamicLocation["VertexID$3", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$2", Automatic, Center], {3., 1.}, 
+         DynamicLocation["VertexID$4", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$2", Automatic, Center], {3.5, 1.5}, 
+         DynamicLocation["VertexID$5", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$2", Automatic, Center], {4., 2.}, 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$2", Automatic, Center], {4.5, 2.5}, 
+         DynamicLocation["VertexID$7", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$2", Automatic, Center], {5., 3.}, 
+         DynamicLocation["VertexID$8", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$2", Automatic, Center], {5.5, 3.5}, 
+         DynamicLocation["VertexID$9", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$3", Automatic, Center], {3.5, 0.5}, 
+         DynamicLocation["VertexID$4", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$3", Automatic, Center], {4., 1.}, 
+         DynamicLocation["VertexID$5", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$3", Automatic, Center], {4.5, 1.5}, 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$3", Automatic, Center], {5., 2.}, 
+         DynamicLocation["VertexID$7", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$3", Automatic, Center], {5.5, 2.5}, 
+         DynamicLocation["VertexID$8", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$3", Automatic, Center], {6., 3.}, 
+         DynamicLocation["VertexID$9", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$4", Automatic, Center], {4.5, 0.5}, 
+         DynamicLocation["VertexID$5", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$4", Automatic, Center], {5., 1.}, 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$4", Automatic, Center], {5.5, 1.5}, 
+         DynamicLocation["VertexID$7", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$4", Automatic, Center], {6., 2.}, 
+         DynamicLocation["VertexID$8", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$4", Automatic, Center], {6.5, 2.5}, 
+         DynamicLocation["VertexID$9", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$5", Automatic, Center], {5.5, 0.5}, 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$5", Automatic, Center], {6., 1.}, 
+         DynamicLocation["VertexID$7", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$5", Automatic, Center], {6.5, 1.5}, 
+         DynamicLocation["VertexID$8", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$5", Automatic, Center], {7., 2.}, 
+         DynamicLocation["VertexID$9", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$6", Automatic, Center], {6.5, 0.5}, 
+         DynamicLocation["VertexID$7", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$6", Automatic, Center], {7., 1.}, 
+         DynamicLocation["VertexID$8", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$6", Automatic, Center], {7.5, 1.5}, 
+         DynamicLocation["VertexID$9", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$6", Automatic, Center], {8., 2.}, 
+         DynamicLocation["VertexID$10", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$7", Automatic, Center], {7.5, 0.5}, 
+         DynamicLocation["VertexID$8", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$7", Automatic, Center], {8., 1.}, 
+         DynamicLocation["VertexID$9", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$7", Automatic, Center], {8.5, 1.5}, 
+         DynamicLocation["VertexID$10", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$7", Automatic, Center], {9., 2.}, 
+         DynamicLocation["VertexID$11", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$7", Automatic, Center], {9.5, 2.5}, 
+         DynamicLocation["VertexID$12", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$7", Automatic, Center], {10., 3.}, 
+         DynamicLocation["VertexID$13", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$7", Automatic, Center], {10.5, 3.5}, 
+         DynamicLocation["VertexID$14", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$7", Automatic, Center], {11., 4.}, 
+         DynamicLocation["VertexID$15", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$8", Automatic, Center], {8.5, 0.5}, 
+         DynamicLocation["VertexID$9", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$8", Automatic, Center], {9., 1.}, 
+         DynamicLocation["VertexID$10", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$8", Automatic, Center], {9.5, 1.5}, 
+         DynamicLocation["VertexID$11", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$8", Automatic, Center], {10., 2.}, 
+         DynamicLocation["VertexID$12", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$8", Automatic, Center], {10.5, 2.5}, 
+         DynamicLocation["VertexID$13", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$8", Automatic, Center], {11., 3.}, 
+         DynamicLocation["VertexID$14", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$8", Automatic, Center], {11.5, 3.5}, 
+         DynamicLocation["VertexID$15", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$9", Automatic, Center], {9.5, 0.5}, 
+         DynamicLocation["VertexID$10", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$9", Automatic, Center], {10., 1.}, 
+         DynamicLocation["VertexID$11", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$9", Automatic, Center], {10.5, 1.5}, 
+         DynamicLocation["VertexID$12", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$9", Automatic, Center], {11., 2.}, 
+         DynamicLocation["VertexID$13", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$9", Automatic, Center], {11.5, 2.5}, 
+         DynamicLocation["VertexID$14", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$9", Automatic, Center], {12., 3.}, 
+         DynamicLocation["VertexID$15", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$10", Automatic, Center], {10.5, 0.5}, 
+         DynamicLocation["VertexID$11", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$10", Automatic, Center], {11., 1.}, 
+         DynamicLocation["VertexID$12", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$10", Automatic, Center], {11.5, 1.5}, 
+         DynamicLocation["VertexID$13", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$10", Automatic, Center], {12., 2.}, 
+         DynamicLocation["VertexID$14", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$10", Automatic, Center], {12.5, 2.5}, 
+         DynamicLocation["VertexID$15", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$11", Automatic, Center], {11.5, 0.5}, 
+         DynamicLocation["VertexID$12", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$11", Automatic, Center], {12., 1.}, 
+         DynamicLocation["VertexID$13", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$11", Automatic, Center], {12.5, 1.5}, 
+         DynamicLocation["VertexID$14", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$11", Automatic, Center], {13., 2.}, 
+         DynamicLocation["VertexID$15", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$12", Automatic, Center], {12.5, 0.5}, 
+         DynamicLocation["VertexID$13", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$12", Automatic, Center], {13., 1.}, 
+         DynamicLocation["VertexID$14", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$12", Automatic, Center], {13.5, 1.5}, 
+         DynamicLocation["VertexID$15", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$13", Automatic, Center], {13.5, 0.5}, 
+         DynamicLocation["VertexID$14", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$13", Automatic, Center], {14., 1.}, 
+         DynamicLocation["VertexID$15", Automatic, Center]}], 
+       BezierCurveBox[{
+         DynamicLocation["VertexID$14", Automatic, Center], {14.5, 0.5}, 
+         DynamicLocation["VertexID$15", Automatic, Center]}]}, {
+       Directive[
+        Hue[0.6, 0.2, 0.8], 
+        EdgeForm[
+         Directive[
+          GrayLevel[0], 
+          Opacity[0.7]]]], 
+       TagBox[{
+         TagBox[
+          DiskBox[{1., 0.}, 0.07779783393501805], "DynamicName", BoxID -> 
+          "VertexID$1"], 
+         InsetBox[
+          FormBox["1", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$1", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$1"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{2., 0.}, 0.07779783393501805], "DynamicName", BoxID -> 
+          "VertexID$2"], 
+         InsetBox[
+          FormBox["2", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$2", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$2"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{3., 0.}, 0.07779783393501805], "DynamicName", BoxID -> 
+          "VertexID$3"], 
+         InsetBox[
+          FormBox["3", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$3", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$3"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{4., 0.}, 0.07779783393501805], "DynamicName", BoxID -> 
+          "VertexID$4"], 
+         InsetBox[
+          FormBox["4", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$4", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$4"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{5., 0.}, 0.07779783393501805], "DynamicName", BoxID -> 
+          "VertexID$5"], 
+         InsetBox[
+          FormBox["5", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$5", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$5"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{6., 0.}, 0.07779783393501805], "DynamicName", BoxID -> 
+          "VertexID$6"], 
+         InsetBox[
+          FormBox["6", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$6", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$6"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{7., 0.}, 0.07779783393501805], "DynamicName", BoxID -> 
+          "VertexID$7"], 
+         InsetBox[
+          FormBox["7", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$7", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$7"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{8., 0.}, 0.07779783393501805], "DynamicName", BoxID -> 
+          "VertexID$8"], 
+         InsetBox[
+          FormBox["8", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$8", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$8"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{9., 0.}, 0.07779783393501805], "DynamicName", BoxID -> 
+          "VertexID$9"], 
+         InsetBox[
+          FormBox["9", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$9", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$9"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{10., 0.}, 0.07779783393501805], "DynamicName", BoxID -> 
+          "VertexID$10"], 
+         InsetBox[
+          FormBox["10", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$10", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$10"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{11., 0.}, 0.07779783393501805], "DynamicName", BoxID -> 
+          "VertexID$11"], 
+         InsetBox[
+          FormBox["11", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$11", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$11"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{12., 0.}, 0.07779783393501805], "DynamicName", BoxID -> 
+          "VertexID$12"], 
+         InsetBox[
+          FormBox["12", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$12", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$12"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{13., 0.}, 0.07779783393501805], "DynamicName", BoxID -> 
+          "VertexID$13"], 
+         InsetBox[
+          FormBox["13", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$13", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$13"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{14., 0.}, 0.07779783393501805], "DynamicName", BoxID -> 
+          "VertexID$14"], 
+         InsetBox[
+          FormBox["14", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$14", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$14"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{15., 0.}, 0.07779783393501805], "DynamicName", BoxID -> 
+          "VertexID$15"], 
+         InsetBox[
+          FormBox["15", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$15", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$15"]}}], $CellContext`flag}, 
+    TagBox[
+     DynamicBox[GraphComputation`NetworkGraphicsBox[
+      3, Typeset`graph, Typeset`boxes, $CellContext`flag], {
+      CachedValue :> Typeset`boxes, SingleEvaluation -> True, 
+       SynchronousUpdating -> False, TrackedSymbols :> {$CellContext`flag}},
+      ImageSizeCache->{{3.9406933090100935`, 
+       369.2116417007394}, {-56.239306690989906`, 49.412439250730785`}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False,
+    UnsavedVariables:>{$CellContext`flag}]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{{3.728739002787426*^9, 
+  3.7287390076321306`*^9}},ExpressionUUID->"28669ad2-b12b-4a3a-b5ee-\
+7e038e239b8c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NearestNeighborGraph", "[", 
+  RowBox[{
+   RowBox[{"RandomChoice", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"True", ",", "False"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"50", ",", "3"}], "}"}]}], "]"}], ",", 
+   RowBox[{"DistanceFunction", "\[Rule]", "JaccardDissimilarity"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7287390435583305`*^9, 
+  3.7287390435737877`*^9}},ExpressionUUID->"eacddb31-88cc-4afa-81f1-\
+0aefca095834"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{True, False, False}, {False, True, True}, {True, False, True}, {
+       True, True, False}, {False, False, False}, {False, True, False}, {
+       True, True, True}, {False, False, True}}, {
+       SparseArray[
+       Automatic, {8, 8}, 0, {
+        1, {{0, 2, 3, 4, 5, 12, 14, 17, 19}, {{3}, {4}, {7}, {7}, {7}, {1}, {
+          2}, {3}, {4}, {6}, {7}, {8}, {2}, {4}, {2}, {3}, {4}, {2}, {3}}}, 
+         Pattern}], Null}]], Typeset`boxes, Typeset`boxes$s2d = 
+    GraphicsGroupBox[{{
+       Arrowheads[Medium], 
+       Directive[
+        Opacity[0.7], 
+        Hue[0.6, 0.7, 0.5]], 
+       ArrowBox[{
+         DynamicLocation["VertexID$1", Automatic, Center], 
+         DynamicLocation["VertexID$3", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$1", Automatic, Center], 
+         DynamicLocation["VertexID$4", Automatic, Center]}], 
+       ArrowBox[
+        BezierCurveBox[{
+          DynamicLocation["VertexID$2", Automatic, Center], {
+          0.8714580648710737, 1.4741034964517998`}, 
+          DynamicLocation["VertexID$7", Automatic, Center]}]], 
+       ArrowBox[
+        BezierCurveBox[{
+          DynamicLocation["VertexID$3", Automatic, Center], {
+          1.6075233095069623`, 0.9659745773562912}, 
+          DynamicLocation["VertexID$7", Automatic, Center]}]], 
+       ArrowBox[
+        BezierCurveBox[{
+          DynamicLocation["VertexID$4", Automatic, Center], {
+          0.8443938925040733, 0.6499407922135909}, 
+          DynamicLocation["VertexID$7", Automatic, Center]}]], 
+       ArrowBox[{
+         DynamicLocation["VertexID$5", Automatic, Center], 
+         DynamicLocation["VertexID$1", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$5", Automatic, Center], 
+         DynamicLocation["VertexID$2", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$5", Automatic, Center], 
+         DynamicLocation["VertexID$3", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$5", Automatic, Center], 
+         DynamicLocation["VertexID$4", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$5", Automatic, Center], 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$5", Automatic, Center], 
+         DynamicLocation["VertexID$7", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$5", Automatic, Center], 
+         DynamicLocation["VertexID$8", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$6", Automatic, Center], 
+         DynamicLocation["VertexID$2", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$6", Automatic, Center], 
+         DynamicLocation["VertexID$4", Automatic, Center]}], 
+       ArrowBox[
+        BezierCurveBox[{
+          DynamicLocation["VertexID$7", Automatic, Center], {
+          0.7551714740934306, 1.2126492514471519`}, 
+          DynamicLocation["VertexID$2", Automatic, Center]}]], 
+       ArrowBox[
+        BezierCurveBox[{
+          DynamicLocation["VertexID$7", Automatic, Center], {
+          1.6491541780875756`, 1.2406129375848698`}, 
+          DynamicLocation["VertexID$3", Automatic, Center]}]], 
+       ArrowBox[
+        BezierCurveBox[{
+          DynamicLocation["VertexID$7", Automatic, Center], {
+          1.2225818431545383`, 0.5333082624157973}, 
+          DynamicLocation["VertexID$4", Automatic, Center]}]], 
+       ArrowBox[{
+         DynamicLocation["VertexID$8", Automatic, Center], 
+         DynamicLocation["VertexID$2", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$8", Automatic, Center], 
+         DynamicLocation["VertexID$3", Automatic, Center]}]}, {
+       Directive[
+        Hue[0.6, 0.2, 0.8], 
+        EdgeForm[
+         Directive[
+          GrayLevel[0], 
+          Opacity[0.7]]]], 
+       TagBox[{
+         TagBox[
+          DiskBox[{1.859893491205368, 0.}, 0.02298258772385911], 
+          "DynamicName", BoxID -> "VertexID$1"], 
+         InsetBox[
+          FormBox[
+           RowBox[{"{", 
+             RowBox[{"True", ",", "False", ",", "False"}], "}"}], 
+           TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$1", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$1"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{0.41582471685870337`, 1.520167395594188}, 
+           0.02298258772385911], "DynamicName", BoxID -> "VertexID$2"], 
+         InsetBox[
+          FormBox[
+           RowBox[{"{", 
+             RowBox[{"False", ",", "True", ",", "True"}], "}"}], 
+           TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$2", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$2"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{2.0458726654887363`, 1.0400021626352498`}, 
+           0.02298258772385911], "DynamicName", BoxID -> "VertexID$3"], 
+         InsetBox[
+          FormBox[
+           RowBox[{"{", 
+             RowBox[{"True", ",", "False", ",", "True"}], "}"}], 
+           TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$3", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$3"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{0.856170913552813, 0.01666370232321246}, 
+           0.02298258772385911], "DynamicName", BoxID -> "VertexID$4"], 
+         InsetBox[
+          FormBox[
+           RowBox[{"{", 
+             RowBox[{"True", ",", "True", ",", "False"}], "}"}], 
+           TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$4", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$4"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{1.062344470260123, 0.7418570938381654}, 
+           0.02298258772385911], "DynamicName", BoxID -> "VertexID$5"], 
+         InsetBox[
+          FormBox[
+           RowBox[{"{", 
+             RowBox[{"False", ",", "False", ",", "False"}], "}"}], 
+           TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$5", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$5"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{0., 0.5494632384952197}, 0.02298258772385911], 
+          "DynamicName", BoxID -> "VertexID$6"], 
+         InsetBox[
+          FormBox[
+           RowBox[{"{", 
+             RowBox[{"False", ",", "True", ",", "False"}], "}"}], 
+           TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$6", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$6"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{1.2108048221058003`, 1.166585352306137}, 
+           0.02298258772385911], "DynamicName", BoxID -> "VertexID$7"], 
+         InsetBox[
+          FormBox[
+           RowBox[{"{", 
+             RowBox[{"True", ",", "True", ",", "True"}], "}"}], 
+           TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$7", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$7"], 
+       TagBox[{
+         TagBox[
+          
+          DiskBox[{1.4052428133804202`, 1.894166129850547}, 
+           0.02298258772385911], "DynamicName", BoxID -> "VertexID$8"], 
+         InsetBox[
+          FormBox[
+           RowBox[{"{", 
+             RowBox[{"False", ",", "False", ",", "True"}], "}"}], 
+           TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$8", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$8"]}}], $CellContext`flag}, 
+    TagBox[
+     DynamicBox[GraphComputation`NetworkGraphicsBox[
+      3, Typeset`graph, Typeset`boxes, $CellContext`flag], {
+      CachedValue :> Typeset`boxes, SingleEvaluation -> True, 
+       SynchronousUpdating -> False, TrackedSymbols :> {$CellContext`flag}},
+      ImageSizeCache->{{6.180000000000002, 
+       441.41807010179554`}, {-178.70527010179538`, 157.53844364064682`}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False,
+    UnsavedVariables:>{$CellContext`flag}]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{
+  3.7287391218657656`*^9},ExpressionUUID->"910c3910-fd07-4ca2-99dd-\
+dc128e3753b2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RelationGraph", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"#1", "<", "6"}], "&&", 
+     RowBox[{"#2", "\[GreaterEqual]", "6"}]}], "&"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", 
+     "8"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7287391226291137`*^9, 
+  3.7287391226291137`*^9}},ExpressionUUID->"0e8c7055-1116-4e1b-831f-\
+c266d719b408"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4, 5, 6, 7, 8}, {
+       SparseArray[
+       Automatic, {8, 8}, 0, {
+        1, {{0, 3, 6, 9, 12, 15, 15, 15, 15}, {{6}, {7}, {8}, {6}, {7}, {8}, {
+          6}, {7}, {8}, {6}, {7}, {8}, {6}, {7}, {8}}}, Pattern}], Null}, {
+      VertexLabels -> {"Name"}}]], Typeset`boxes, Typeset`boxes$s2d = 
+    GraphicsGroupBox[{{
+       Arrowheads[Medium], 
+       Directive[
+        Opacity[0.7], 
+        Hue[0.6, 0.7, 0.5]], 
+       ArrowBox[{
+         DynamicLocation["VertexID$1", Automatic, Center], 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$1", Automatic, Center], 
+         DynamicLocation["VertexID$7", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$1", Automatic, Center], 
+         DynamicLocation["VertexID$8", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$2", Automatic, Center], 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$2", Automatic, Center], 
+         DynamicLocation["VertexID$7", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$2", Automatic, Center], 
+         DynamicLocation["VertexID$8", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$3", Automatic, Center], 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$3", Automatic, Center], 
+         DynamicLocation["VertexID$7", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$3", Automatic, Center], 
+         DynamicLocation["VertexID$8", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$4", Automatic, Center], 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$4", Automatic, Center], 
+         DynamicLocation["VertexID$7", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$4", Automatic, Center], 
+         DynamicLocation["VertexID$8", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$5", Automatic, Center], 
+         DynamicLocation["VertexID$6", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$5", Automatic, Center], 
+         DynamicLocation["VertexID$7", Automatic, Center]}], 
+       ArrowBox[{
+         DynamicLocation["VertexID$5", Automatic, Center], 
+         DynamicLocation["VertexID$8", Automatic, Center]}]}, {
+       Directive[
+        Hue[0.6, 0.2, 0.8], 
+        EdgeForm[
+         Directive[
+          GrayLevel[0], 
+          Opacity[0.7]]]], 
+       TagBox[{
+         TagBox[
+          DiskBox[{0., 1.}, 0.03700564971751412], "DynamicName", BoxID -> 
+          "VertexID$1"], 
+         InsetBox[
+          FormBox["1", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$1", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$1"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{1., 1.}, 0.03700564971751412], "DynamicName", BoxID -> 
+          "VertexID$2"], 
+         InsetBox[
+          FormBox["2", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$2", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$2"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{2., 1.}, 0.03700564971751412], "DynamicName", BoxID -> 
+          "VertexID$3"], 
+         InsetBox[
+          FormBox["3", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$3", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$3"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{3., 1.}, 0.03700564971751412], "DynamicName", BoxID -> 
+          "VertexID$4"], 
+         InsetBox[
+          FormBox["4", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$4", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$4"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{4., 1.}, 0.03700564971751412], "DynamicName", BoxID -> 
+          "VertexID$5"], 
+         InsetBox[
+          FormBox["5", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$5", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$5"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{1., 0.}, 0.03700564971751412], "DynamicName", BoxID -> 
+          "VertexID$6"], 
+         InsetBox[
+          FormBox["6", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$6", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$6"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{2., 0.}, 0.03700564971751412], "DynamicName", BoxID -> 
+          "VertexID$7"], 
+         InsetBox[
+          FormBox["7", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$7", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$7"], 
+       TagBox[{
+         TagBox[
+          DiskBox[{3., 0.}, 0.03700564971751412], "DynamicName", BoxID -> 
+          "VertexID$8"], 
+         InsetBox[
+          FormBox["8", TraditionalForm], 
+          Offset[{2, 2}, 
+           DynamicLocation["VertexID$8", Automatic, {Right, Top}]], 
+          ImageScaled[{0, 0}], BaseStyle -> "Graphics"]}, "DynamicName", 
+        BoxID -> "VertexLabelID$8"]}}], $CellContext`flag}, 
+    TagBox[
+     DynamicBox[GraphComputation`NetworkGraphicsBox[
+      3, Typeset`graph, Typeset`boxes, $CellContext`flag], {
+      CachedValue :> Typeset`boxes, SingleEvaluation -> True, 
+       SynchronousUpdating -> False, TrackedSymbols :> {$CellContext`flag}},
+      ImageSizeCache->{{6.179999999999999, 
+       360.6102092510191}, {-64.89740925101904, 42.748525974206075`}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False,
+    UnsavedVariables:>{$CellContext`flag}]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{
+  3.7287391235283284`*^9},ExpressionUUID->"715e5b8c-5cfb-4704-b916-\
+ef0f38380d21"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
@@ -2246,7 +3535,33 @@ Cell[81861, 1995, 840, 19, 115, "Output", "ExpressionUUID" -> \
 "60dc02a3-3754-4e6b-853c-68532c93faaa"]
 }, Open  ]],
 Cell[82716, 2017, 202, 6, 49, "Text", "ExpressionUUID" -> \
-"9572f5ff-6b9d-48b2-bbb9-6dfd93ff01b8"]
+"9572f5ff-6b9d-48b2-bbb9-6dfd93ff01b8"],
+Cell[82921, 2025, 151, 3, 39, "Input", "ExpressionUUID" -> \
+"79f41869-f494-4bc7-a8e6-af7d7f321fc0"],
+Cell[CellGroupData[{
+Cell[83097, 2032, 340, 7, 39, "Input", "ExpressionUUID" -> \
+"c768db89-d20c-4779-8345-8af9a06327b3"],
+Cell[83440, 2041, 22682, 428, 382, "Output", "ExpressionUUID" -> \
+"c94c2df5-fe5c-49b4-8146-5602f10917b1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[106159, 2474, 263, 6, 39, "Input", "ExpressionUUID" -> \
+"1a5f7234-6d74-4267-a63d-6072e502ba4f"],
+Cell[106425, 2482, 19660, 409, 138, "Output", "ExpressionUUID" -> \
+"28669ad2-b12b-4a3a-b5ee-7e038e239b8c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[126122, 2896, 472, 13, 39, "Input", "ExpressionUUID" -> \
+"eacddb31-88cc-4afa-81f1-0aefca095834"],
+Cell[126597, 2911, 9099, 218, 358, "Output", "ExpressionUUID" -> \
+"910c3910-fd07-4ca2-99dd-dc128e3753b2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[135733, 3134, 452, 13, 39, "Input", "ExpressionUUID" -> \
+"0e8c7055-1116-4e1b-831f-c266d719b408"],
+Cell[136188, 3149, 6806, 162, 163, "Output", "ExpressionUUID" -> \
+"715e5b8c-5cfb-4704-b916-ef0f38380d21"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
