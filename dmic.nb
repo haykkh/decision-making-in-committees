@@ -1,0 +1,1033 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     40752,       1023]
+NotebookOptionsPosition[     39631,        986]
+NotebookOutlinePosition[     40058,       1003]
+CellTagsIndexPosition[     40015,       1000]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "\"\<Global*`\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "IGraphM`"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.7306383272005253`*^9, 3.7306383303877373`*^9}, {
+  3.730671170402911*^9, 3.730671180880988*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"IGraph/M 0.3.97.2 (February 5, 2018)\"\>"], "Print",
+ CellChangeTimes->{3.730638334121029*^9, 3.7306387184451427`*^9, 
+  3.7306711867127943`*^9, 3.730671272008012*^9}],
+
+Cell[BoxData["\<\"Evaluate IGDocumentation[] to get started.\"\>"], "Print",
+ CellChangeTimes->{3.730638334121029*^9, 3.7306387184451427`*^9, 
+  3.7306711867127943`*^9, 3.730671272017123*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "latticer", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"latticer", "[", 
+   RowBox[{"n_", ",", " ", "r_"}], "]"}], ":=", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Created", " ", "a", " ", "1", "D", " ", "periodic", " ", "lattice", " ", 
+    "with", " ", "radius", " ", "r"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"IGMakeLattice", "[", 
+   RowBox[{
+    RowBox[{"{", "n", "}"}], ",", 
+    RowBox[{"Radius", " ", "\[Rule]", "r"}], ",", 
+    RowBox[{"Periodic", "\[Rule]", "True"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.730637920115189*^9, 3.730637949040513*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "setVertexProp", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"setVertexProp", "[", 
+   RowBox[{"g_", ",", "prop_", ",", "vals_"}], "]"}], ":=", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", "\[IndentingNewLine]", "\t", 
+   RowBox[{
+    RowBox[{
+    "Sets", " ", "the", " ", "property", " ", "prop", " ", "of", " ", "the", 
+     " ", "vertices", " ", "in", " ", "g", " ", "to", " ", "vals"}], ";", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", "input", ";", 
+    "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"g", ":", " ", "graph"}], ";", "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"prop", ":", " ", 
+     RowBox[{"property", " ", "of", " ", "vertex"}]}], ";", 
+    "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"vals", ":", " ", 
+     RowBox[{"a", " ", "list", " ", "of", " ", "values"}]}], ";", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", "output", ";", 
+    "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"a", " ", "graph"}]}], "\[IndentingNewLine]", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"Module", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"h", "=", "g"}], ",", 
+      RowBox[{"vl", "=", 
+       RowBox[{"VertexList", "@", "g"}]}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Do", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"PropertyValue", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{"h", ",", "\[IndentingNewLine]", 
+            RowBox[{"vl", "[", 
+             RowBox[{"[", "i", "]"}], "]"}]}], "\[IndentingNewLine]", "}"}], 
+          ",", "\[IndentingNewLine]", "prop"}], "\[IndentingNewLine]", "]"}], 
+        "=", 
+        RowBox[{"vals", "[", 
+         RowBox[{"[", "i", "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{"Length", "@", "vl"}]}], "}"}]}], "\[IndentingNewLine]", 
+      "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Return", "@", "h"}]}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.730637952258217*^9, 3.730637957441908*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "grapherSi", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"grapherSi", "[", 
+   RowBox[{"n_", ",", " ", "k_", ",", " ", "e_", ",", "si_"}], "]"}], " ", ":=",
+   "\[IndentingNewLine]", 
+  RowBox[{"(*", "\[IndentingNewLine]", "\t", 
+   RowBox[{
+    RowBox[{
+    "Creates", " ", "a", " ", "graph", " ", "of", " ", "n", " ", "members", 
+     " ", "with", " ", "random", " ", "states", " ", 
+     RowBox[{"(", 
+      RowBox[{"0", "/", "1"}], ")"}]}], ";", "\[IndentingNewLine]", "\t", 
+    RowBox[{
+    "linked", " ", "to", " ", "their", " ", "k", " ", "nearest", " ", 
+     "neighbors"}], ";", "\[IndentingNewLine]", "\t", 
+    RowBox[{
+    "The", " ", "links", " ", "are", " ", "then", " ", "each", " ", "rewired",
+      " ", "with", " ", "probability", " ", "e"}], ";", "\[IndentingNewLine]",
+     "\[IndentingNewLine]", "\t", "input", ";", "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"n", ":", " ", 
+     RowBox[{"number", " ", "of", " ", "members"}]}], ";", 
+    "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"k", ":", " ", 
+     RowBox[{"degrees", " ", "of", " ", "vertex"}]}], ";", 
+    "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"e", ":", " ", 
+     RowBox[{"probablity", " ", "of", " ", "rewiring"}]}], ";", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", "outputs", ";", 
+    "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"a", " ", "graph"}]}], "\[IndentingNewLine]", "*)"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"Module", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"r", ",", " ", "states", ",", " ", "graph", ",", "g1"}], "}"}], 
+    ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"r", " ", "=", " ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"radius", " ", "of", " ", "lattice"}], " ", "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"Round", "[", 
+       FractionBox["k", "2"], "]"}]}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"states", " ", "=", " ", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{
+        "a", " ", "list", " ", "of", " ", "random", " ", "states", " ", 
+         "between", " ", "0"}], " ", "\[UndirectedEdge]", " ", "1"}], " ", 
+       "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"RandomSample", "[", "\[IndentingNewLine]", 
+       RowBox[{"Join", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Table", "[", 
+          RowBox[{"0", ",", " ", "si"}], "]"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"Table", "[", 
+          RowBox[{"1", ",", " ", 
+           RowBox[{"n", "-", "si"}]}], "]"}]}], "]"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"graph", "=", "  ", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"setVertexProp", "[", " ", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "sets", " ", "the", " ", "\"\<State\>\"", "s", " ", "and", " ", 
+         "VertexLabels", " ", 
+         RowBox[{"to", " ", "'"}], 
+         RowBox[{"states", "'"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"IGRewireEdges", "[", " ", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+          "rewires", " ", "the", " ", "graph", " ", "with", " ", 
+           "probability", " ", "e"}], " ", "*)"}], "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"latticer", "[", 
+           RowBox[{"n", ",", "r"}], "]"}], ",", 
+          RowBox[{"(*", " ", 
+           RowBox[{
+           "creates", " ", "a", " ", "graph", " ", "of", " ", "n", " ", 
+            "members", " ", "with", " ", "radius", " ", "r"}], " ", "*)"}], 
+          "\[IndentingNewLine]", "e"}], "\[IndentingNewLine]", "]"}], ",", 
+        "  ", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"\"\<State\>\"", ",", " ", "VertexLabels"}], "}"}], ",", " ",
+         "\[IndentingNewLine]", "states"}], "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", "]"}]}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]}], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "stringer", "]"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "creates", " ", "a", " ", "value", " ", "\"\<abi\>\"", " ", "for", " ", 
+    "dummy", " ", "variables", " ", "in", " ", "majority"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"stringer", "[", "i_", "]"}], " ", ":=", " ", 
+   RowBox[{"\"\<ab\>\"", "<>", 
+    RowBox[{"ToString", "[", "i", "]"}]}]}], 
+  " "}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.730638068053577*^9, 3.730638071796118*^9}, {
+  3.730639316600286*^9, 3.7306393200155993`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "majority", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"majority", "[", 
+    RowBox[{"h_", ",", " ", "list_"}], "]"}], " ", ":=", 
+   "\[IndentingNewLine]", 
+   RowBox[{"True", " ", "/;", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"Length", "[", "list", " ", "]"}], " ", "\[Equal]", " ", "2"}],
+       ")"}], " ", "\[And]", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"list", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], " ", "\[Equal]", " ", 
+       RowBox[{"list", "[", 
+        RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}]}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"majority", "[", 
+    RowBox[{"h_", ",", " ", "list_"}], "]"}], " ", ":=", 
+   "\[IndentingNewLine]", 
+   RowBox[{"False", " ", "/;", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"Length", "[", "list", "]"}], " ", "\[Equal]", " ", "2"}], 
+      ")"}], " ", "\[And]", " ", 
+     RowBox[{"!", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"list", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], " ", "\[Equal]", " ", 
+        RowBox[{"list", "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}]}]}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"majority", "[", " ", 
+   RowBox[{"h_", ",", " ", "list_"}], "]"}], ":=", " ", "\[IndentingNewLine]", 
+  RowBox[{"(*", "\[IndentingNewLine]", "\t", 
+   RowBox[{
+    RowBox[{
+    "Returns", " ", "True", " ", "if", " ", "a", " ", "majority", " ", 
+     "above", " ", "the", " ", 
+     RowBox[{"threshold", " ", "'"}], 
+     RowBox[{"h", "'"}], " ", "is", " ", "reached", " ", "in", " ", "list"}], 
+    ";", "\[IndentingNewLine]", "\t", 
+    RowBox[{
+    "Returns", " ", "False", " ", "if", " ", "no", " ", "majority", " ", 
+     "above", " ", "the", " ", 
+     RowBox[{"threshold", " ", "'"}], 
+     RowBox[{"h", "'"}], " ", "is", " ", "reached", " ", "in", " ", "list"}], 
+    ";", "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", "inputs", ";", 
+    "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"h", ":", "    ", "threshold"}], ";", "\[IndentingNewLine]", 
+    "\t\t", 
+    RowBox[{"list", ":", " ", 
+     RowBox[{"list", " ", "of", " ", "elements", " ", "to", " ", "check"}]}], 
+    ";", "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", "outputs", ";", 
+    "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"True", " ", "or", " ", "False"}], ";"}], "\[IndentingNewLine]", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Module", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{"ab", ",", " ", "swaps"}], "\[IndentingNewLine]", "}"}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"ab", " ", "=", " ", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"stringer", "[", "i", "]"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", " ", "1", ",", " ", 
+          RowBox[{"Length", "[", "list", "]"}]}], "}"}]}], "]"}]}], ";", "  ", 
+     RowBox[{"(*", " ", 
+      RowBox[{"dummy", " ", "list", " ", "of", " ", 
+       RowBox[{"{", 
+        RowBox[{
+        "ab1", ",", " ", "ab2", ",", " ", "ab3", ",", " ", "...", ",", " ", 
+         "abN"}], "}"}], " ", "where", " ", "N", " ", "is", " ", "the", " ", 
+       "length", " ", "of", " ", "list"}], " ", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"swaps", " ", "=", "  ", 
+      RowBox[{"Dispatch", "[", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"ab", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], " ", "\[Rule]", " ", 
+          RowBox[{"list", "[", 
+           RowBox[{"[", "i", "]"}], "]"}]}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", " ", "1", ",", " ", 
+           RowBox[{"Length", "[", "list", "]"}]}], "}"}]}], "]"}], "]"}]}], 
+     ";", " ", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+      "creates", " ", "a", " ", "list", " ", "of", " ", "transformations", 
+       " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"ab1", " ", "\[Rule]", " ", 
+          RowBox[{"list", "[", "1", "]"}]}], ",", " ", 
+         RowBox[{"ab2", " ", "\[Rule]", " ", 
+          RowBox[{"list", "[", "2", "]"}]}], ",", " ", "...", ",", " ", 
+         RowBox[{"abN", " ", "\[Rule]", " ", 
+          RowBox[{"list", "[", "N", "]"}]}]}], "}"}], " ", "to", " ", "swap", 
+       " ", "back", " ", "after", " ", "BooleanCountingFunction"}], " ", 
+      "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"BooleanConvert", "[", "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
+         RowBox[{
+         "converts", " ", "from", " ", "a", " ", "functional", " ", "form", 
+          " ", "to", " ", "disjunctive", " ", "normal", " ", "form"}], " ", 
+         "*)"}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"BooleanCountingFunction", "[", "\[IndentingNewLine]", 
+          RowBox[{"(*", " ", 
+           RowBox[{"compares", " ", "elements", " ", "in", " ", "list", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"element1", " ", "\[And]", " ", "element2"}], ",", " ", 
+              
+              RowBox[{"\[And]", " ", 
+               RowBox[{
+                RowBox[{"is", " ", "later", " ", "swapped", " ", "with"}], 
+                " ", "=="}]}]}], ")"}], " ", "and", " ", "returns", " ", 
+            "True", " ", "if", " ", "at", " ", "least", " ", "a", " ", 
+            "majority", " ", "above", " ", "the", " ", "threshold", " ", "h", 
+            " ", "are", " ", "agree"}], "  ", "*)"}], "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"Ceiling", "[", 
+              RowBox[{"h", " ", 
+               RowBox[{"Length", "[", "list", "]"}]}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Length", "[", "list", "]"}]}], "\[IndentingNewLine]", 
+            "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"Length", "[", "list", "]"}]}], "\[IndentingNewLine]", 
+          "]"}], " ", "@@", " ", "ab"}], "\[IndentingNewLine]", 
+        "\[IndentingNewLine]", "]"}], " ", "//.", " ", "swaps"}], " ", "//.", 
+      " ", 
+      RowBox[{"And", " ", "\[Rule]", " ", "Equal"}]}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.730639299834671*^9, 3.730639310065868*^9}, {
+  3.730639403689076*^9, 3.730639403993251*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "newState", "]"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", "\[IndentingNewLine]", "\t", 
+   RowBox[{
+    RowBox[{
+    "Returns", " ", "the", " ", "new", " ", "state", " ", "of", " ", "a", " ",
+      "vertex"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", 
+    "inputs", ";", "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"v", ":", "    ", 
+     RowBox[{"current", " ", "state", " ", "of", " ", "vertex"}]}], ";", 
+    "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"h", ":", "    ", "threshold"}], ";", "\[IndentingNewLine]", 
+    "\t\t", 
+    RowBox[{"list", ":", " ", 
+     RowBox[{"list", " ", "of", " ", "elements", " ", "to", " ", "check"}]}], 
+    ";", "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", "outputs", ";", 
+    "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"1", " ", "or", " ", "0"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"newState", "[", 
+    RowBox[{"v_", ",", "h_", ",", " ", "list_"}], "]"}], " ", ":=", 
+   "\[IndentingNewLine]", 
+   RowBox[{"0", " ", "/;", 
+    RowBox[{"(", " ", 
+     RowBox[{
+      RowBox[{"majority", "[", 
+       RowBox[{"h", ",", "list"}], "]"}], " ", "\[And]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Commonest", "[", "list", "]"}], "[", 
+         RowBox[{"[", "1", "]"}], "]"}], " ", "\[Equal]", " ", "0"}], ")"}]}],
+      ")"}]}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"newState", "[", 
+    RowBox[{"v_", ",", "h_", ",", "list_"}], "]"}], " ", ":=", 
+   "\[IndentingNewLine]", 
+   RowBox[{"1", " ", "/;", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"majority", "[", 
+       RowBox[{"h", ",", " ", "list"}], "]"}], " ", "\[And]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Commonest", "[", "list", "]"}], "[", 
+         RowBox[{"[", "1", "]"}], "]"}], " ", "\[Equal]", " ", "1"}], ")"}]}],
+      ")"}]}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"newState", "[", 
+    RowBox[{"v_", ",", " ", "h_", ",", " ", "list_"}], "]"}], " ", ":=", " ", 
+   "\[IndentingNewLine]", 
+   RowBox[{"v", " ", "/;", " ", 
+    RowBox[{"!", 
+     RowBox[{"majority", "[", 
+      RowBox[{"h", ",", " ", "list"}], "]"}]}]}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"newState", "[", 
+   RowBox[{"v_", ",", "h_", ",", "list_"}], "]"}], " ", ":=", " ", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"list", "[", 
+    RowBox[{"[", "1", "]"}], "]"}], " ", "/;", " ", 
+   RowBox[{
+    RowBox[{"Length", "[", "list", "]"}], " ", "\[Equal]", " ", 
+    "1"}]}]}]}], "Input",
+ CellChangeTimes->{{3.730639213413344*^9, 3.73063929053773*^9}, {
+  3.730639324226532*^9, 3.730639339323736*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "associatedAdjacencyLister", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"associatedAdjacencyLister", "[", "g_", "]"}], " ", ":=", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+    "Creates", " ", "an", " ", "association", " ", "of", " ", "vertices", " ",
+      "with", " ", "vertices", " ", "they", " ", "are", " ", "connected", " ",
+      "to"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"(", 
+     RowBox[{
+     "ie", " ", "if", " ", "vertex", " ", "1", " ", "is", " ", "connected", 
+      " ", "to", " ", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "3", ",", "4"}], "}"}], " ", "it", " ", "would", " ",
+       "return", " ", 
+      RowBox[{"<|", 
+       RowBox[{
+        RowBox[{"1", " ", "\[Rule]", " ", 
+         RowBox[{"{", 
+          RowBox[{"2", ",", "3", ",", "4"}], "}"}]}], ",", "..."}], "|>"}]}], 
+     ")"}], ";"}], "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"AssociationThread", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", " ", 
+      RowBox[{"Length", "[", 
+       RowBox[{"VertexList", "[", "g", "]"}], "]"}]}], "]"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"AdjacencyList", "[", 
+       RowBox[{"g", ",", "#"}], "]"}], " ", "&"}], " ", "/@", " ", 
+     RowBox[{"VertexList", "[", "g", "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.730639599532617*^9, 3.730639604234207*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "seter", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SetAttributes", "[", 
+    RowBox[{"seter", ",", " ", "HoldFirst"}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"seter", "[", 
+   RowBox[{"g_", ",", "key_", ",", "value_", ",", "h_"}], "]"}], " ", ":=", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", "\[IndentingNewLine]", "\t", 
+   RowBox[{
+    RowBox[{
+    "Sets", " ", "the", " ", "state", " ", "of", " ", "a", " ", "vertex"}], 
+    ",", " ", "key", ",", " ", 
+    RowBox[{
+     RowBox[{
+     "with", " ", "a", " ", "value", " ", "depending", " ", "on", " ", 
+      "value"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", 
+     "inputs", ";", "\[IndentingNewLine]", "\t\t", 
+     RowBox[{"g", ":", "     ", "graph"}], ";", "\[IndentingNewLine]", "\t\t", 
+     RowBox[{"key", ":", "   ", 
+      RowBox[{"vertex", " ", "to", " ", "be", " ", "updated"}]}], ";", 
+     "\[IndentingNewLine]", "\t\t", 
+     RowBox[{"value", ":", " ", 
+      RowBox[{"neighboring", " ", "vertices"}]}], ";", "\[IndentingNewLine]", 
+     "\t\t", 
+     RowBox[{"h", ":", "     ", "threshold"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", "\t", "outputs", ";", "\[IndentingNewLine]", 
+     "\t\t", "nothing", ";"}]}], "\[IndentingNewLine]", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"Module", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{"s", ",", " ", "properties"}], "\[IndentingNewLine]", "}"}], ",",
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"s", " ", "=", " ", 
+      RowBox[{"PropertyValue", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"g", ",", " ", "key"}], "}"}], ",", "\"\<State\>\""}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"properties", " ", "=", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"PropertyValue", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"g", ",", " ", "#"}], "}"}], ",", " ", "\"\<State\>\""}], 
+         "]"}], " ", "&"}], "/@", " ", "value"}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"PropertyValue", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"g", ",", "key"}], "}"}], ",", " ", "\"\<State\>\""}], "]"}],
+       " ", "=", " ", 
+      RowBox[{"newState", "[", 
+       RowBox[{"s", ",", " ", "h", ",", " ", "properties"}], "]"}]}]}]}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.730638108798561*^9, 3.7306381209719048`*^9}, {
+  3.73063934323032*^9, 3.7306395116839743`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "propertyChanger", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SetAttributes", "[", 
+    RowBox[{"propertyChanger", ",", " ", "HoldFirst"}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"propertyChanger", "[", 
+   RowBox[{"graph_", ",", " ", "l_", ",", " ", "h_"}], "]"}], " ", ":=", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", "\[IndentingNewLine]", "\t", 
+   RowBox[{
+    RowBox[{
+    "Threads", " ", "through", " ", "the", " ", "associated", " ", 
+     "adjacency", " ", "list", " ", "l"}], ",", " ", 
+    RowBox[{
+     RowBox[{
+     "updating", " ", "the", " ", "states", " ", "of", " ", "the", " ", 
+      "vertices", " ", "using", " ", "seter"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", "\t", "inputs", ";", "\[IndentingNewLine]", 
+     "\t\t", 
+     RowBox[{"graph", ":", " ", "graph"}], ";", "\[IndentingNewLine]", "\t\t", 
+     RowBox[{"l", ":", "     ", 
+      RowBox[{"associated", " ", "adjacency", " ", "list"}]}], ";", 
+     "\[IndentingNewLine]", "\t\t", 
+     RowBox[{"h", ":", "     ", "threshold"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", "\t", "outputs", ";", "\[IndentingNewLine]", 
+     "\t\t", "nothing", ";"}]}], "\[IndentingNewLine]", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"MapThread", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"seter", "[", 
+      RowBox[{"graph", ",", "#1", ",", "#2", ",", "0.6"}], "]"}], " ", "&"}], 
+    ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Keys", "[", "l", "]"}], ",", " ", 
+      RowBox[{"Values", "[", "l", "]"}]}], "}"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.7306381271104727`*^9, 3.73063814049183*^9}, {
+  3.7306395186997004`*^9, 3.730639648129365*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "iterator", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SetAttributes", "[", 
+    RowBox[{"iterator", ",", " ", "HoldFirst"}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"iterator", "[", 
+   RowBox[{"g_", ",", " ", "h_"}], "]"}], " ", ":=", " ", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", "\[IndentingNewLine]", "\t", 
+   RowBox[{
+    RowBox[{
+    "Creates", " ", "an", " ", "associated", " ", "adjacency", " ", "list", 
+     " ", "with", " ", "a", " ", "random", " ", "order"}], ",", " ", 
+    RowBox[{
+     RowBox[{
+     "then", " ", "changes", " ", "the", " ", "states", " ", "of", " ", "the",
+       " ", "vertices", " ", "using", " ", "propertyChanger"}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", "inputs", ";", 
+     "\[IndentingNewLine]", "\t\t", 
+     RowBox[{"g", ":", " ", "graph"}], ";", "\[IndentingNewLine]", "\t\t", 
+     RowBox[{"h", ":", " ", "threshold"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", "\t", "outputs", ";", "\[IndentingNewLine]", 
+     "\t\t", "nothing", ";"}]}], "\[IndentingNewLine]", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"Module", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", "propertyList", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"propertyList", " ", "=", 
+      RowBox[{"RandomSample", "[", 
+       RowBox[{"associatedAdjacencyLister", "[", "g", "]"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"propertyChanger", "[", 
+      RowBox[{"g", ",", " ", "propertyList", ",", " ", "h"}], "]"}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.7306381864728928`*^9, 3.7306381979206533`*^9}, {
+  3.7306396566049213`*^9, 3.730639713263411*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "modelerSi", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"modelerSi", "[", 
+   RowBox[{"n_", ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"k_", ",", " ", "h_", ",", " ", "e_"}], "}"}], ",", " ", "i_", 
+    ",", " ", "si_"}], "]"}], " ", ":=", " ", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", "\[IndentingNewLine]", "\t", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"Implementation", " ", "of", " ", 
+       RowBox[{"Parkinson", "'"}], "s", " ", "Law", "  ", "for", " ", 
+       "decision"}], "-", 
+      RowBox[{"making", " ", "in", " ", "committees"}]}], ";", 
+     "\[IndentingNewLine]", "\t", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", "\t", "inputs", ";", "\[IndentingNewLine]", 
+     "\t\t", 
+     RowBox[{"n", ":", " ", 
+      RowBox[{"committee", " ", "size", " ", 
+       RowBox[{"(", 
+        RowBox[{"n", " ", "\[Element]", " ", "\[DoubleStruckCapitalN]"}], 
+        ")"}]}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", "\t\t", 
+     
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"k", ",", " ", "h", ",", " ", "e"}], "}"}], ":", " ", 
+      RowBox[{"model", " ", "parameters"}]}], ";", "\[IndentingNewLine]", 
+     "\t\t\t", 
+     RowBox[{"k", ":", " ", 
+      RowBox[{"connectivity", " ", 
+       RowBox[{"(", 
+        RowBox[{
+        "number", " ", "of", " ", "undirected", " ", "links", " ", "between", 
+         " ", "nodes"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{"k", " ", "\[Element]", " ", "\[DoubleStruckCapitalN]"}], 
+        ")"}]}]}], ";", "\[IndentingNewLine]", "\t\t\t", 
+     RowBox[{"h", ":", " ", 
+      RowBox[{"threshold", " ", 
+       RowBox[{"(", 
+        RowBox[{"h", " ", "\[Element]", " ", 
+         RowBox[{"[", 
+          RowBox[{"0.5", ",", " ", "1"}], "]"}]}], ")"}]}]}], ";", 
+     "\[IndentingNewLine]", "\t\t\t", 
+     RowBox[{"e", ":", " ", 
+      RowBox[{"rewiring", " ", "probability", " ", 
+       RowBox[{"(", 
+        RowBox[{"e", " ", "\[Element]", " ", 
+         RowBox[{"[", 
+          RowBox[{"0", ",", " ", "1"}], "]"}]}], ")"}]}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", "\t\t", 
+     RowBox[{"i", ":", " ", "iterations"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", "outputs", ";", 
+     "\[IndentingNewLine]", "\t\t", 
+     RowBox[{"a", " ", "list", " ", "of", " ", "states"}]}], ",", " ", 
+    RowBox[{
+     RowBox[{"and", " ", "the", " ", "final", " ", "graph"}], ";"}]}], 
+   "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"Module", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"graph", ",", "o", ",", "states", ",", " ", "plot"}], "}"}], ",",
+     "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"graph", " ", "=", " ", 
+      RowBox[{"grapherSi", "[", 
+       RowBox[{"n", ",", " ", "k", ",", " ", "e", ",", "si"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"states", " ", "=", " ", 
+      RowBox[{"{", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"PropertyValue", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"graph", ",", " ", "o"}], "}"}], ",", " ", 
+           "\"\<State\>\""}], "]"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"o", ",", " ", "1", ",", " ", "n"}], "}"}]}], "]"}], 
+       "}"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Do", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"iterator", "[", 
+         RowBox[{"graph", ",", "h"}], "]"}], ";", " ", "\[IndentingNewLine]", 
+        
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"states", ",", " ", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"PropertyValue", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"graph", ",", " ", "o"}], "}"}], ",", " ", 
+              "\"\<State\>\""}], "]"}], ",", " ", 
+            RowBox[{"{", 
+             RowBox[{"o", ",", " ", "1", ",", " ", "n"}], "}"}]}], "]"}]}], 
+         "]"}]}], ",", " ", "\[IndentingNewLine]", "i"}], 
+      "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"plot", " ", "=", " ", 
+      RowBox[{"ArrayPlot", "[", 
+       RowBox[{"states", ",", " ", 
+        RowBox[{"Mesh", "\[Rule]", "True"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"states", ",", " ", "graph"}], "}"}]}]}], "\[IndentingNewLine]",
+    "]"}]}]}], "Input",
+ CellChangeTimes->{{3.730639718483878*^9, 3.730639754135893*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "finalState", "]"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Extracts", " ", "the", " ", "final", " ", "states", " ", "of", " ", "the",
+     " ", "vertices", " ", "from", " ", "the", " ", "output", " ", "of", " ", 
+    "modelerSi"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"finalState", "[", "m_", "]"}], " ", ":=", " ", 
+  RowBox[{
+   RowBox[{"m", "[", 
+    RowBox[{"[", "1", "]"}], "]"}], "[", 
+   RowBox[{"[", 
+    RowBox[{"-", "1"}], "]"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.7306382324795103`*^9, 3.7306382413625803`*^9}, {
+  3.7306398007561817`*^9, 3.7306398240878553`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "plotter", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"plotter", "[", "m_", "]"}], " ", ":=", "  ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Plots", " ", "an", " ", "array", " ", "of", " ", "the", " ", "evolution", 
+    " ", "of", " ", "states"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"ArrayPlot", "[", 
+   RowBox[{
+    RowBox[{"m", "[", 
+     RowBox[{"[", "1", "]"}], "]"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "True"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.730638246156373*^9, 3.730638258638782*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "grapher", "]"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "displays", " ", "the", " ", "graph", " ", "from", " ", "the", " ", 
+    "output", " ", "of", " ", "modelerSi"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"grapher", "[", "m_", "]"}], " ", ":=", 
+  RowBox[{"m", "[", 
+   RowBox[{"[", "2", "]"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.730638252687064*^9, 3.730638256221027*^9}, {
+  3.730639829231835*^9, 3.7306398425042152`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "d", "]"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", "\[IndentingNewLine]", "\t", 
+   RowBox[{
+    RowBox[{
+    "Heaviside", " ", "function", " ", "that", " ", "returns", " ", "0", " ", 
+     "if", " ", "all", " ", "the", " ", "vertices", " ", "agree", " ", "and", 
+     " ", "1", " ", "if", " ", "any", " ", "disagree"}], ";", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", "inputs", ";", 
+    "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"n", ":", "  ", 
+     RowBox[{"number", " ", "of", " ", "members"}]}], ";", 
+    "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"sf", ":", " ", 
+     RowBox[{
+     "number", " ", "of", " ", "members", " ", "with", " ", "final", " ", 
+      "state", " ", "0"}]}], ";", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", "\t", "outputs", ";", "\[IndentingNewLine]", 
+    "\t\t", 
+    RowBox[{"1", " ", "or", " ", "0"}], ";"}], "\[IndentingNewLine]", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"d", "[", 
+   RowBox[{"n_", ",", " ", "sf_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"0", " ", "/;", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"n", " ", "\[Equal]", " ", "sf"}], ")"}], "  ", "\[Or]", " ", 
+    RowBox[{"(", 
+     RowBox[{"sf", " ", "\[Equal]", " ", "0"}], 
+     ")"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"d", "[", 
+   RowBox[{"n_", ",", " ", "sf_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"1", " ", "/;", " ", 
+   RowBox[{"n", " ", "\[NotEqual]", " ", "sf"}]}]}]}], "Input",
+ CellChangeTimes->{{3.730638286929871*^9, 3.730638288062872*^9}, {
+  3.730639845839731*^9, 3.7306399194453707`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "dissensus", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dissensus", "[", 
+   RowBox[{"n_", ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"k_", ",", " ", "h_", ",", " ", "e_"}], "}"}], ",", " ", "i_"}], 
+   "]"}], ":=", "\[IndentingNewLine]", 
+  RowBox[{"(*", "\[IndentingNewLine]", "\t", 
+   RowBox[{
+    RowBox[{
+    "Gives", " ", "the", " ", "expectation", " ", "value", " ", "of", " ", 
+     "a", " ", "final", " ", "state", " ", "without", " ", "consensus", " ", 
+     "and", " ", "measures", " ", "the", " ", "groups", " ", "proneness", " ",
+      "to", " ", "end", " ", "up", " ", "in", " ", "dispute"}], ";", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", 
+    SubscriptBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      RowBox[{"\[Theta]", 
+       RowBox[{"(", 
+        RowBox[{"1", " ", "-", " ", 
+         FractionBox[
+          RowBox[{"max", 
+           RowBox[{"(", 
+            RowBox[{
+             SubscriptBox["S", "f"], ",", " ", 
+             RowBox[{"N", " ", "-", " ", 
+              SubscriptBox["S", "f"]}]}], ")"}]}], "N"]}], ")"}]}], 
+      "\[RightAngleBracket]"}], 
+     SubscriptBox["S", "i"]], ";", "\[IndentingNewLine]", "\t", 
+    "\[IndentingNewLine]", "\t", "where", ";", "\[IndentingNewLine]", "\t\t", 
+    
+    RowBox[{
+     RowBox[{"\[Theta]", 
+      RowBox[{"(", "x", ")"}]}], ":", "  ", 
+     RowBox[{"d", "[", 
+      RowBox[{"n", ",", " ", "sf"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    "\t\t", 
+    RowBox[{
+     SubscriptBox["S", "f"], ":", "    ", 
+     RowBox[{
+     "number", " ", "of", " ", "members", " ", "with", " ", "final", " ", 
+      "state", " ", "0"}]}], ";", "\[IndentingNewLine]", "\t\t", 
+    RowBox[{
+     SubscriptBox["S", "i"], ":", "    ", 
+     RowBox[{
+     "number", " ", "of", " ", "members", " ", "with", " ", "inital", " ", 
+      "state", " ", "0"}]}], ";", "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"N", ":", "     ", 
+     RowBox[{"number", " ", "of", " ", "members"}]}], ";", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", "\t",
+     "inputs", ";", "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"n", ":", " ", 
+     RowBox[{"committee", " ", "size", " ", 
+      RowBox[{"(", 
+       RowBox[{"n", " ", "\[Element]", " ", "\[DoubleStruckCapitalN]"}], 
+       ")"}]}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", "\t\t", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"k", ",", " ", "h", ",", " ", "e"}], "}"}], ":", " ", 
+     RowBox[{"model", " ", "parameters"}]}], ";", "\[IndentingNewLine]", 
+    "\t\t\t", 
+    RowBox[{"k", ":", " ", 
+     RowBox[{"connectivity", " ", 
+      RowBox[{"(", 
+       RowBox[{
+       "number", " ", "of", " ", "undirected", " ", "links", " ", "between", 
+        " ", "nodes"}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{"k", " ", "\[Element]", " ", "\[DoubleStruckCapitalN]"}], 
+       ")"}]}]}], ";", "\[IndentingNewLine]", "\t\t\t", 
+    RowBox[{"h", ":", " ", 
+     RowBox[{"threshold", " ", 
+      RowBox[{"(", 
+       RowBox[{"h", " ", "\[Element]", " ", 
+        RowBox[{"[", 
+         RowBox[{"0.5", ",", " ", "1"}], "]"}]}], ")"}]}]}], ";", 
+    "\[IndentingNewLine]", "\t\t\t", 
+    RowBox[{"e", ":", " ", 
+     RowBox[{"rewiring", " ", "probability", " ", 
+      RowBox[{"(", 
+       RowBox[{"e", " ", "\[Element]", " ", 
+        RowBox[{"[", 
+         RowBox[{"0", ",", " ", "1"}], "]"}]}], ")"}]}]}], ";", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"i", ":", " ", "iterations"}], ";", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", "\t", "outputs", ";", "\[IndentingNewLine]", 
+    "\t\t", 
+    RowBox[{"a", " ", "\[Element]", " ", 
+     RowBox[{"[", 
+      RowBox[{"0", ",", " ", "1"}], "]"}]}]}], "\[IndentingNewLine]", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"Module", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"ms", ",", "fs", ",", "ds"}], "}"}], ",", "\[IndentingNewLine]", 
+    
+    RowBox[{
+     RowBox[{"ms", " ", "=", " ", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"modelerSi", "[", 
+         RowBox[{"n", ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"k", ",", " ", "h", ",", " ", "e"}], "}"}], ",", " ", "i", 
+          ",", " ", "si"}], "]"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"si", ",", " ", "0", ",", " ", "n"}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"fs", " ", "=", " ", 
+      RowBox[{"finalState", " ", "/@", " ", "ms"}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"ds", " ", "=", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"d", "[", 
+         RowBox[{"n", ",", " ", 
+          RowBox[{"Count", "[", 
+           RowBox[{"#", ",", " ", "0"}], "]"}]}], "]"}], " ", "&"}], " ", "/@",
+        " ", "fs"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"Mean", "[", "ds", "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.730639924286167*^9, 3.730639929301646*^9}, {
+  3.730639967686921*^9, 3.730640255554175*^9}}]
+},
+WindowSize->{808, 651},
+WindowMargins->{{Automatic, 141}, {Automatic, 27}},
+FrontEndVersion->"10.4 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 11, \
+2016)",
+StyleDefinitions->FrontEnd`FileName[{"Report"}, "StandardReport.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 270, 4, 72, "Input"],
+Cell[CellGroupData[{
+Cell[875, 30, 185, 2, 22, "Print"],
+Cell[1063, 34, 191, 2, 22, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[1281, 40, 681, 16, 106, "Input"],
+Cell[1965, 58, 2196, 52, 480, "Input"],
+Cell[4164, 112, 4098, 91, 794, "Input"],
+Cell[8265, 205, 648, 16, 106, "Input"],
+Cell[8916, 223, 6524, 153, 803, "Input"],
+Cell[15443, 378, 2877, 74, 446, "Input"],
+Cell[18323, 454, 1569, 39, 208, "Input"],
+Cell[19895, 495, 2671, 65, 463, "Input"],
+Cell[22569, 562, 1831, 43, 344, "Input"],
+Cell[24403, 607, 1855, 41, 395, "Input"],
+Cell[26261, 650, 4677, 114, 667, "Input"],
+Cell[30941, 766, 704, 17, 89, "Input"],
+Cell[31648, 785, 613, 15, 89, "Input"],
+Cell[32264, 802, 557, 14, 89, "Input"],
+Cell[32824, 818, 1670, 39, 276, "Input"],
+Cell[34497, 859, 5130, 125, 734, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
